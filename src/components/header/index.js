@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowLeft";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import CancelIcon from "@material-ui/icons/Cancel";
@@ -87,11 +87,7 @@ export default function ButtonAppBar() {
                     }}
                   />
                 ) : (
-                  <KeyboardArrowLeftIcon
-                    variant="contained"
-                    color="primary"
-                    fontSize="large"
-                  />
+                  <></>
                 )}
               </Box>
             </Box>
@@ -130,11 +126,17 @@ export default function ButtonAppBar() {
               </ListItem>
             </List>
             <div className={classes.drawerButtons}>
-              <Button className={classes.buttonOutlined} variant="outlined">
+              <Button
+                className={classes.buttonOutlinedDrawer}
+                variant="outlined"
+              >
                 {" "}
                 community
               </Button>
-              <Button className={classes.buttonContained} variant="contained">
+              <Button
+                className={classes.buttonOutlinedDrawer}
+                variant="contained"
+              >
                 {" "}
                 Get Started
               </Button>
@@ -151,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     color: theme.palette.primary.main,
     gridTemplateColumns: "0.7fr 1fr ",
-    background: "linear-gradient(88.55deg, #A4FB7B -19.41%, #1B1772 115.44%)",
+    background: theme.palette.background.primary,
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "space-between",
@@ -167,7 +169,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none",
     },
   },
@@ -200,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiPaper-root": {
       width: "100%",
       color: theme.palette.primary.main,
-      background: "linear-gradient(88.55deg, #A4FB7B -19.41%, #1B1772 115.44%)",
+      background: theme.palette.background.primary,
     },
   },
 
@@ -213,9 +215,13 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     padding: "0px 10px",
   },
+  HeaderItems: {
+    padding: "10px 0px",
+  },
   drawerButtons: {
     display: "flex",
     justifyContent: "space-between",
     padding: "0px 20px",
   },
+  buttonOutlinedDrawer: { height: "25px", width: "100%" },
 }));
