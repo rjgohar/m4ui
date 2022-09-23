@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     color: theme.palette.primary.main,
     gridTemplateColumns: "0.7fr 1fr ",
-    background: "linear-gradient(88.55deg, #A4FB7B -19.41%, #1B1772 115.44%)",
+    background: theme.palette.background.primary,
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "space-between",
@@ -202,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiPaper-root": {
       width: "100%",
       color: theme.palette.primary.main,
-      background: "linear-gradient(88.55deg, #A4FB7B -19.41%, #1B1772 115.44%)",
+      background: theme.palette.background.primary,
     },
   },
 
