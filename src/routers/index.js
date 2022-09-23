@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
- 
+import Header from "../components/header";
 
 const Routers = () => {
-  return (<>
-    <Router>
-      
-    
-      <Routes>
-        {/* <Route
+  return (
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          {/* <Route
           path="/About-us"
           element={
             
@@ -15,8 +15,8 @@ const Routers = () => {
           }
         /> */}
         </Routes>
-     
-    </Router></>
+      </Router>
+    </>
   );
 };
 

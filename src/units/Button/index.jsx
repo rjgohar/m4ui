@@ -17,23 +17,26 @@ export default withStyles((theme) => ({
   },
 
   outlined: {
-    color: theme.palette.text.primary,
-    background: theme.palette.secondary.main,
+    color: theme.palette.secondary.main,
+    background: "transparent",
     margin: "0px 5px",
-    borderRadius: 41,
+    borderRadius: 5,
+    textAlign: "center",
+    border: "1px solid" + theme.palette.secondary.main,
     "&:hover": {
-      backgroundColor: alpha(theme.palette.secondary.main, 0.7),
+      backgroundColor: "transparent",
+      transform: "scale(1.03)"
     },
   },
 
   contained: {
-    color: theme.palette.secondary.main,
-    border: "1px solid" + theme.palette.secondary.main,
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: 25,
+    color: theme.palette.text.primary,
+
+    backgroundColor: theme.palette.secondary.main,
+    borderRadius: 5,
     transition: "all 0.9s ease",
     "&:hover": {
-      backgroundColor: alpha(theme.palette.primary.light),
+      backgroundColor: alpha(theme.palette.secondary.main, 0.7),
       color: theme.palette.text.primary,
       transform: "scale(1.03)",
     },
