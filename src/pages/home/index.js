@@ -1,5 +1,5 @@
 import React from "react";
-import HeadSection from "../../components/headerSection/inex";
+import HeadSection from "../../components/headerSection";
 
 export default function Home() {
   return (
