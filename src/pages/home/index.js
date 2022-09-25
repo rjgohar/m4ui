@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <HeadSection />
-      <M4uiManageSec/>
+       
 
       
     </div>
