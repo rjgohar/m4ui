@@ -1,4 +1,6 @@
+import { makeStyles } from "@material-ui/core";
 import React from "react";
+import AppSection from "../../components/appSection";
 import Mapaccordion from "../../components/FAQs/Mapaccordion";
 import HeadSection from "../../components/headerSection";
 import M4uiManageSec from "../../components/m4uimanageSection";
@@ -10,6 +12,7 @@ export default function Home() {
     <div>
       <HeadSection />
       <AppSection />
+      <M4uiManageSec />
     </div>
   );
 }

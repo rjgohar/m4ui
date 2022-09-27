@@ -2,6 +2,7 @@ import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import MobileBg from "../../assests/mobile_mock_up.svg";
 import Data from "../../components/card/data";
+import Button from "../../units/Button";
 import Wrapper from "../../units/wrapper";
 import Card from "../card";
 
@@ -20,6 +21,14 @@ export default function AppSection() {
           <br />
           eiusmod tempor incididunt ut labore et <br /> dolore magna aliqua.{" "}
         </Typography>
+
+        <Box className={classes.btnContainer}>
+          {" "}
+          <Button className={classes.btn2} variant="outlined">
+            {" "}
+            Download Now
+          </Button>
+        </Box>
       </Box>
       <Box className={classes.main}>
         <Typography variant="h1" align="center">
@@ -52,21 +61,19 @@ export default function AppSection() {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    position: "relative",
+    backgroundSize: "cover",
     backgroundImage: `url(${MobileBg})`,
     backgroundRepeat: "no-repeat",
-    // width: "100%",
-    height: "140vh",
   },
   main: {
     color: theme.palette.text.primary,
-    padding: "8em 0em 3em 0em",
+    padding: "0em 0em 3em 0em",
   },
   mainSecondary: {
     color: theme.palette.secondary.main,
   },
   cardContainer: {
-    padding: "1em",
+    padding: "2em",
   },
   cardContainerGrid: {
     display: "flex",
@@ -78,14 +85,30 @@ const useStyles = makeStyles((theme) => ({
   header: {
     color: theme.palette.text.primary,
     padding: "3.5em 0em 1em 2em",
-    fontSize: "70px",
+    fontSize: "60px",
     [theme.breakpoints.down("xs")]: {
       fontSize: "50px",
+      textAlign: "center",
+      padding: "1em",
     },
   },
   paragraph: {
     color: theme.palette.text.primary,
-    fontSize: "30px",
+    fontSize: "25px",
     paddingLeft: "5em",
+    paddingBottom: "1.5em",
+    textTransform: "capitalize",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "20px",
+      textAlign: "center",
+      padding: "0em",
+    },
+  },
+  btnContainer: {
+    padding: "2em 0em 6em 10em",
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "center",
+      padding: "2em",
+    },
   },
 }));
