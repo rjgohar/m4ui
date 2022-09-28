@@ -47,8 +47,6 @@ export default function M4uiManageSec() {
 
         <Box></Box>
       </Box>
-
-      <div>hahh</div>
     </>
   );
 }
@@ -117,10 +115,10 @@ const useStyles = makeStyles((theme) => ({
     width: 100,
     color: theme.palette.secondary.main,
     fontSize: 15,
-    [theme.breakpoints.down("xs")]:{
+    [theme.breakpoints.down("xs")]: {
       paddingTop: 30,
-      width:200,
-    }
+      width: 200,
+    },
   },
   span: {
     textTransform: "uppercase",
