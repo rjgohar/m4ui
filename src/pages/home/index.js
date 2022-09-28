@@ -8,6 +8,7 @@ import OurCustomer from "../../components/ourCostomerGrid";
 import RegisterMini from "../../components/registerminicampo";
 import RegisterSection from "../../components/registerSection";
 import SectionCount from "../../components/sectionCount";
+import VideoSection from "../../components/videoCampo";
 
 export default function Home() {
   const classes = useStyles();
@@ -17,6 +18,8 @@ export default function Home() {
       <AppSection />
       <SectionCount />
       <M4uiManageSec />
+
+      <VideoSection />
     </div>
   );
 }
