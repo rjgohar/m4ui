@@ -15,6 +15,7 @@ export default function Home() {
     <div>
       <HeadSection />
       <AppSection />
+      <SectionCount />
       <M4uiManageSec />
     </div>
   );
