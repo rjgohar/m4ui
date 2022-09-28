@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div>
       <HeadSection />
-      <ApplicationSection />
     </div>
   );
 }
