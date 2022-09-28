@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     background: theme.palette.background.main,
     display: "flex",
+    marginTop: 160,
+    marginBottom: 50,
 
     justifyContent: "space-around",
     alignItems: "center",
