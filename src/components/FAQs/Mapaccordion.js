@@ -30,8 +30,6 @@ export default function Mapaccordion() {
           );
         })}
       </Box>
-
-      <Box>sglksks</Box>
     </Box>
   );
 }

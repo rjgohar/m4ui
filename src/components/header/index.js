@@ -9,6 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { Box, List, ListItem, SwipeableDrawer } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -41,11 +42,12 @@ export default function ButtonAppBar() {
               </Typography>
             </div>
             <div className={classes.buttonContainer}>
-              {" "}
-              <Button className={classes.buttonOutlined} variant="outlined">
-                {" "}
-                community
-              </Button>
+              <Link to="/community">
+                <Button className={classes.buttonOutlined} variant="outlined">
+                  {" "}
+                  community
+                </Button>
+              </Link>
               <Button className={classes.buttonContained} variant="contained">
                 {" "}
                 Get Started
@@ -176,6 +178,10 @@ const useStyles = makeStyles((theme) => ({
   buttonContainer: {
     display: "flex",
     gap: "12px",
+
+    "& a": {
+      textDecoration: "none",
+    },
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
