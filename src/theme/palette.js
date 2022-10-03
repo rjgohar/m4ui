@@ -7,6 +7,7 @@ export const palette = {
   },
   text: {
     primary: "#242573",
+    secondary: "#517076",
   },
   background: {
     main: "linear-gradient(86.73deg, #A4FB7B -10.91%, #242573 98.86%)",

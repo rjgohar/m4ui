@@ -6,6 +6,7 @@ import HeadSection from "../../components/headerSection";
 import ApplicationSection from "../../components/m4uiApplicationSection";
 import M4uiManageSec from "../../components/m4uimanageSection";
 import OurCustomer from "../../components/ourCostomerGrid";
+import PriceSection from "../../components/priceSection";
 import RegisterMini from "../../components/registerminicampo";
 import RegisterSection from "../../components/registerSection";
 import SectionCount from "../../components/sectionCount";
@@ -22,6 +23,7 @@ export default function Home() {
       <ApplicationSection />
       <VideoSection />
       <OurCustomer />
+      <PriceSection />
     </div>
   );
 }

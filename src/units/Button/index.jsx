@@ -41,4 +41,16 @@ export default withStyles((theme) => ({
       transform: "scale(1.03)",
     },
   },
+  primary:{  
+    color: theme.palette.primary.main,
+    padding:"10px",
+    background: theme.palette.background.secondary,
+    borderRadius: 5,
+    transition: "all 0.9s ease",
+    "&:hover": {
+      background: theme.palette.primary.main,
+      color: theme.palette.text.secondary,
+      transform: "scale(1.03)",
+    },
+  }
 }))(Button);
