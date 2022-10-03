@@ -10,6 +10,7 @@ import PriceSection from "../../components/priceSection";
 import RegisterMini from "../../components/registerminicampo";
 import RegisterSection from "../../components/registerSection";
 import SectionCount from "../../components/sectionCount";
+import Slider from "../../components/slider";
 import VideoSection from "../../components/videoCampo";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <VideoSection />
       <OurCustomer />
       <PriceSection />
+      <Slider />
     </div>
   );
 }
