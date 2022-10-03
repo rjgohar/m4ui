@@ -24,8 +24,8 @@ export default function Home() {
       <ApplicationSection />
       <VideoSection />
       <OurCustomer />
-      <PriceSection />
       <Slider />
+      <PriceSection />
     </div>
   );
 }
