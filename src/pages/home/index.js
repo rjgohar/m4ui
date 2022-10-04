@@ -23,6 +23,7 @@ export default function Home() {
       <M4uiManageSec />
       <ApplicationSection />
       <VideoSection />
+      <BlogSection />
       <OurCustomer />
       <PriceSection />
     </div>
