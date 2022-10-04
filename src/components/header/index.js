@@ -9,6 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { Box, List, ListItem, SwipeableDrawer } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -30,9 +31,11 @@ export default function ButtonAppBar() {
               <Typography variant="h4" className={classes.title}>
                 pricing
               </Typography>
-              <Typography variant="h4" className={classes.title}>
-                blog
-              </Typography>
+              <Link to="/blogs">
+                <Typography variant="h4" className={classes.title}>
+                  blog
+                </Typography>
+              </Link>
               <Typography variant="h4" className={classes.title}>
                 videos
               </Typography>
@@ -41,11 +44,12 @@ export default function ButtonAppBar() {
               </Typography>
             </div>
             <div className={classes.buttonContainer}>
-              {" "}
-              <Button className={classes.buttonOutlined} variant="outlined">
-                {" "}
-                community
-              </Button>
+              <Link to="/community">
+                <Button className={classes.buttonOutlined} variant="outlined">
+                  {" "}
+                  community
+                </Button>
+              </Link>
               <Button className={classes.buttonContained} variant="contained">
                 {" "}
                 Get Started
@@ -126,13 +130,15 @@ export default function ButtonAppBar() {
               </ListItem>
             </List>
             <div className={classes.drawerButtons}>
-              <Button
-                className={classes.buttonOutlinedDrawer}
-                variant="outlined"
-              >
-                {" "}
-                community
-              </Button>
+              <Link to="/community">
+                <Button
+                  className={classes.buttonOutlinedDrawer}
+                  variant="outlined"
+                >
+                  {" "}
+                  community
+                </Button>
+              </Link>
               <Button
                 className={classes.buttonOutlinedDrawer}
                 variant="contained"
@@ -169,6 +175,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+
+    " & a": {
+      color: theme.palette.primary.main,
+      textDecoration: "none",
+    },
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -176,6 +187,10 @@ const useStyles = makeStyles((theme) => ({
   buttonContainer: {
     display: "flex",
     gap: "12px",
+
+    "& a": {
+      textDecoration: "none",
+    },
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -191,6 +206,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     padding: "7px",
     textTransform: "uppercase",
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
   menuButton: {
     width: 30,
@@ -217,6 +235,10 @@ const useStyles = makeStyles((theme) => ({
   },
   HeaderItems: {
     padding: "10px 0px",
+    color: theme.palette.primary.main,
+    "& :hover": {
+      cursor: "pointer",
+    },
   },
   drawerButtons: {
     display: "flex",

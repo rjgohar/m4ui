@@ -7,9 +7,11 @@ import HeadSection from "../../components/headerSection";
 import ApplicationSection from "../../components/m4uiApplicationSection";
 import M4uiManageSec from "../../components/m4uimanageSection";
 import OurCustomer from "../../components/ourCostomerGrid";
+import PriceSection from "../../components/priceSection";
 import RegisterMini from "../../components/registerminicampo";
 import RegisterSection from "../../components/registerSection";
 import SectionCount from "../../components/sectionCount";
+import VideoSection from "../../components/videoCampo";
 
 export default function Home() {
   const classes = useStyles();
@@ -19,7 +21,10 @@ export default function Home() {
       <AppSection />
       <SectionCount />
       <M4uiManageSec />
-      <BlogSection />
+      <ApplicationSection />
+      <VideoSection />
+      <OurCustomer />
+      <PriceSection />
     </div>
   );
 }
