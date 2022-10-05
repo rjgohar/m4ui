@@ -23,6 +23,9 @@ export default function Home() {
       <ApplicationSection />
       <VideoSection />
       <OurCustomer />
+      <Mapaccordion />
+
+      <RegisterSection />
       <PriceSection />
     </div>
   );

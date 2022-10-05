@@ -19,9 +19,11 @@ export default function ButtonAppBar() {
     <div>
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h3" className={classes.title}>
-            LOGO
-          </Typography>
+          <Link to="/">
+            <Typography variant="h3" className={classes.title}>
+              LOGO
+            </Typography>
+          </Link>
 
           <div className={classes.titleContainer}>
             <div className={classes.pageHeadings}>
@@ -160,6 +162,11 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     gridTemplateColumns: "0.7fr 1fr ",
     background: theme.palette.background.primary,
+
+    " & a": {
+      color: theme.palette.primary.main,
+      textDecoration: "none",
+    },
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "space-between",

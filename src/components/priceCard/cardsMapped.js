@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import SimpleCard from ".";
 
@@ -29,21 +29,23 @@ const Data = [
 const CardMapped = () => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      {Data.map(({ title, price, feature1, feature2, feature3 }) => {
-        return (
-          <>
-            <SimpleCard
-              title={title}
-              price={price}
-              feature1={feature1}
-              feature2={feature2}
-              feature3={feature3}
-            />
-          </>
-        );
-      })}
-    </div>
+    <>
+      <div className={classes.container}>
+        {Data.map(({ title, price, feature1, feature2, feature3 }) => {
+          return (
+            <>
+              <SimpleCard
+                title={title}
+                price={price}
+                feature1={feature1}
+                feature2={feature2}
+                feature3={feature3}
+              />
+            </>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
