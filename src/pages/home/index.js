@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import AppSection from "../../components/appSection";
+import BlogSection from "../../components/blogSection";
 import Mapaccordion from "../../components/FAQs/Mapaccordion";
 import HeadSection from "../../components/headerSection";
 import ApplicationSection from "../../components/m4uiApplicationSection";
@@ -23,6 +24,7 @@ export default function Home() {
       <M4uiManageSec />
       <ApplicationSection />
       <VideoSection />
+      <BlogSection />
       <OurCustomer />
       <Slider />
       <PriceSection />

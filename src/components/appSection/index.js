@@ -30,28 +30,30 @@ export default function AppSection() {
           </Button>
         </Box>
       </Box>
-      <Box className={classes.main}>
-        <Typography variant="h1" align="center">
-          API4U makes a <br /> difference in
-          <Typography variant="h1" className={classes.mainSecondary}>
-            UI development
+      <Box className={classes.appContainer}>
+        <Box className={classes.main}>
+          <Typography variant="h1" align="center">
+            API4U makes a <br /> difference in
+            <Typography variant="h1" className={classes.mainSecondary}>
+              UI development
+            </Typography>
           </Typography>
-        </Typography>
-      </Box>
-      <Box>
-        <Box className={classes.cardContainer}>
-          <Box className={classes.cardContainerGrid}>
-            {Data.map((item) => {
-              return (
-                <>
-                  <Card
-                    header={item.header}
-                    image={item.Image}
-                    description={item.Description}
-                  />
-                </>
-              );
-            })}
+        </Box>
+        <Box>
+          <Box className={classes.cardContainer}>
+            <Box className={classes.cardContainerGrid}>
+              {Data.map((item) => {
+                return (
+                  <>
+                    <Card
+                      header={item.header}
+                      image={item.Image}
+                      description={item.Description}
+                    />
+                  </>
+                );
+              })}
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -64,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundImage: `url(${MobileBg})`,
     backgroundRepeat: "no-repeat",
+  },
+  appContainer: {
+    minHeight: 750,
   },
   main: {
     color: theme.palette.text.primary,
