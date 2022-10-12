@@ -51,6 +51,7 @@ export default function Blogs() {
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    margin: "30px 0px",
     background: theme.palette.primary.main,
   },
 

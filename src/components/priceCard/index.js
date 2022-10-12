@@ -17,8 +17,10 @@ export default function SimpleCard({
 
   return (
     <div className={classes.root}>
-      <Box>
-        <Typography variant="h5">{title}</Typography>
+      <Box className={classes.textSection}>
+        <Typography className="headText" variant="h5">
+          {title}
+        </Typography>
         <Typography variant="h1" className={classes.price}>
           {price}$
         </Typography>
@@ -52,8 +54,9 @@ export default function SimpleCard({
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "50px 0px",
-    maxWidth: 250,
+    maxWidth: 350,
     width: "100%",
+    height: 400,
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
@@ -68,7 +71,19 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
   },
-  price: { fontSize: "65px" },
+
+  textSection: {
+    marginTop: 60,
+    "&:hover .headText": {
+      color: theme.palette.primary.main,
+    },
+
+    "& .headText": {
+      fontSize: 20,
+      fontWeight: 500,
+      color: theme.palette.text.primary,
+    },
+  },
   text: { padding: "2px 0px", fontSize: "13px" },
   buttonOutlinedDrawer: { padding: "10px 15px" },
 }));
