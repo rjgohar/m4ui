@@ -1,17 +1,27 @@
 import React from "react";
 import { TableCell, TableRow, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles, withStyles } from "@material-ui/styles";
 import BasicTable from "./index";
+import { Check } from "@material-ui/icons";
+
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+    "&:nth-of-type(odd)": {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
+
 const columns = ["API4UI features", "Community", "Pro", "Enterprise"];
-const client = ["Web engine", "Y", "Y", "Y"];
-const client1 = ["Mobile engine", "Y", "Y", "Y"];
-const client2 = ["Client engine", "Y", "N", "Y"];
-const client3 = ["All designs", "Y", "Y", "Y"];
-const client4 = ["Custom themes", "Y", "Y", "Y"];
-const client5 = ["Versioning", "Y", "Y", "Y"];
-const client6 = ["Github issues", "Y", "Y", "Y"];
-const client7 = ["Mail support", "N", "Y", "Y"];
-const client8 = ["Consultancy", "", "", "*OnCheckout"];
+const client = ["Web engine", "🗸", "🗸", "🗸"];
+const client1 = ["Mobile engine", "🗸", "🗸", "🗸"];
+const client2 = ["Client engine", "🗸", "⨯", "🗸"];
+const client3 = ["All designs", "🗸", "🗸", "🗸"];
+const client4 = ["Custom themes", "🗸", "🗸", "🗸"];
+const client5 = ["Versioning", "🗸", "🗸", "🗸"];
+const client6 = ["Github issues", "🗸", "🗸", "🗸"];
+const client7 = ["Mail support", "⨯", "🗸", "🗸"];
+const client8 = ["Consultancy", "⨯", "⨯", "*OnCheckout"];
 const rows = [
   client,
   client1,
@@ -31,13 +41,13 @@ const FeatureArt = () => {
     </TableCell>
   ));
   const body = rows.map((row, id) => (
-    <TableRow key={id}>
+    <StyledTableRow key={id}>
       {row.map((col) => (
         <TableCell className={classes.col} align="center">
           {col}
         </TableCell>
       ))}
-    </TableRow>
+    </StyledTableRow>
   ));
   return <BasicTable head={head} body={body} />;
 };

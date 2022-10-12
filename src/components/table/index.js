@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   main: {
     minWidth: "100%",
     margin: "auto",
+    border: "none",
     borderRadius: "8px",
     backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.down("sm")]: {},

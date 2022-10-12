@@ -10,7 +10,7 @@ const PriceSection = () => {
   const classes = useStyles();
   const [clk, setClk] = useState(false);
   return (
-    <Box pt={6}>
+    <Box pt={6} className={classes.container}>
       <Box className={classes.textContainer}>
         <Typography className={classes.text} variant="h1">
           choose pricing plan which suits your need
@@ -46,6 +46,9 @@ const PriceSection = () => {
 export default PriceSection;
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: "2em",
+  },
   textContainer: {
     display: "flex",
 
