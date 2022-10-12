@@ -10,7 +10,7 @@ export default Wrapper;
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    padding: "0em 5em",
+    padding: "0em 6em",
     [theme.breakpoints.down("xs")]: {
       padding: "0",
     },

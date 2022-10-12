@@ -12,6 +12,11 @@ export default function SimpleCard({
   feature1,
   feature2,
   feature3,
+  feature4,
+  feature5,
+  feature6,
+  feature7,
+  buttonVal,
 }) {
   const classes = useStyles();
 
@@ -22,7 +27,7 @@ export default function SimpleCard({
           {title}
         </Typography>
         <Typography variant="h1" className={classes.price}>
-          {price}$
+          {price}
         </Typography>
         <Box pt={3}>
           <Typography variant="h4" className={classes.text}>
@@ -34,11 +39,22 @@ export default function SimpleCard({
           <Typography variant="h4" className={classes.text}>
             {feature3}
           </Typography>
+          <Typography variant="h4" className={classes.text}>
+            {feature4}
+          </Typography>
+          <Typography variant="h4" className={classes.text}>
+            {feature5}
+          </Typography>
+          <Typography variant="h4" className={classes.text}>
+            {feature6}
+          </Typography>
+          <Typography variant="h4" className={classes.text}>
+            {feature7}
+          </Typography>
         </Box>
         <Box pt={1}>
           <Button className={classes.buttonOutlinedDrawer} variant="primary">
-            {" "}
-            Choose Plan
+            {buttonVal}
           </Button>
         </Box>
         <Box pt={1}>
@@ -71,19 +87,7 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
   },
-
-  textSection: {
-    marginTop: 60,
-    "&:hover .headText": {
-      color: theme.palette.primary.main,
-    },
-
-    "& .headText": {
-      fontSize: 20,
-      fontWeight: 500,
-      color: theme.palette.text.primary,
-    },
-  },
+  price: { fontSize: "55px" },
   text: { padding: "2px 0px", fontSize: "13px" },
   buttonOutlinedDrawer: { padding: "10px 15px" },
 }));
