@@ -1,10 +1,14 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import { useState } from "react";
 import Button from "../../units/Button";
+import Wrapper from "../../units/wrapper";
 import CardMapped from "../priceCard/cardsMapped";
+import BasicTable from "../table/data";
 
 const PriceSection = () => {
   const classes = useStyles();
+  const [clk, setClk] = useState(false);
   return (
     <Box pt={6}>
       <Box className={classes.textContainer}>
@@ -16,8 +20,25 @@ const PriceSection = () => {
         <CardMapped />
       </Box>
       <Box pt={5} pb={5} className={classes.textContainer}>
-        <Button variant="contained"> compair the plans</Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            setClk(!clk);
+          }}
+        >
+          {" "}
+          compare the plans
+        </Button>
       </Box>
+      {clk ? (
+        <>
+          <Wrapper>
+            <BasicTable />
+          </Wrapper>
+        </>
+      ) : (
+        <></>
+      )}
     </Box>
   );
 };
