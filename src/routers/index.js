@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "../components/footer";
 import Header from "../components/header";
 import Blogs from "../pages/blogs";
 import Community from "../pages/community";
@@ -16,6 +17,7 @@ const Routers = () => {
           {<Route path="/community" element={<Community />} />}
           {<Route path="/blogs" element={<Blogs />} />}
         </Routes>
+        <Footer />
       </Router>
     </>
   );

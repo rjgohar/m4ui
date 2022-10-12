@@ -52,5 +52,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     justifyContent: "center",
   },
-  text: { width: "30%", color: theme.palette.text.primary },
+  text: {
+    marginTop: 60,
+    width: "45%",
+    fontSize: 60,
+    fontWeight: 800,
+    color: theme.palette.text.primary,
+  },
 }));
