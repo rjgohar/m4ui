@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     height: 290,
     transition: "transform 500ms ease",
     "&:hover": {
-      transform: "scale(1.3)",
+      transform: "scale(1.2)",
     },
     [theme.breakpoints.down("sm")]: {
       width: 310,

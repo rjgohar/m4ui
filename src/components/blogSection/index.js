@@ -2,6 +2,8 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import BlogCard from "../blogCard";
 import BlogpostCarousel from "../Carousels/blogpost";
+import MediaCard from "../sliderCard";
+import Data from "./data";
 
 const BlogSection = () => {
   const classes = useStyles();
@@ -15,15 +17,13 @@ const BlogSection = () => {
       </Typography>
       <Box className={classes.blogContainer}>
         <BlogpostCarousel>
-          {Array(6)
-            .fill(1)
-            ?.map((item, i) => (
-              <div>
-                <Box className={classes.cardWrapper}>
-                  <BlogCard />
-                </Box>
-              </div>
-            ))}
+          {Data?.map(({ imag, des }, i) => (
+            <div>
+              <Box className={classes.cardWrapper}>
+                <MediaCard imag={imag} des={des} />
+              </Box>
+            </div>
+          ))}
         </BlogpostCarousel>
       </Box>
     </Box>

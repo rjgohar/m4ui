@@ -9,10 +9,11 @@ const breakPoints = [
   { width: 400, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
   { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
 ];
-const Slider = () => {
+const Slider = (props) => {
   const classes = useStyles();
+  console.log(props.breakPoints);
   return (
     <div className={classes.container}>
       <Box>
@@ -25,12 +26,15 @@ const Slider = () => {
       </Box>
       <div className={classes.innerContainer}>
         <Carousel
+          {...props}
           autoPlaySpeed={5000}
           enableAutoPlay
           disableArrowsOnEnd={false}
           breakPoints={breakPoints}
           infinite={true}
           pagination={false}
+          itemsToShow={4}
+          itemsToScroll={1}
         >
           <SliderCardMapped />
         </Carousel>
@@ -70,7 +74,12 @@ const useStyles = makeStyles((theme) => ({
       "& .bkVSTc": {
         display: "none",
       },
-      "& .fAVBsF": { height: "400px", display: "flex", alignItems: "center" },
+      "& .fAVBsF": {
+        height: "400px",
+        display: "flex",
+        alignItems: "center",
+        gap: 30,
+      },
     },
   },
 }));
