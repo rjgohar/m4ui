@@ -16,7 +16,10 @@ const PriceSection = () => {
         <CardMapped />
       </Box>
       <Box pt={5} pb={5} className={classes.textContainer}>
-        <Button variant="contained"> compair the plans</Button>
+        <Button className={classes.Button} variant="contained">
+          {" "}
+          compair the plans
+        </Button>
       </Box>
     </Box>
   );
@@ -31,5 +34,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     justifyContent: "center",
   },
-  text: { width: "30%", color: theme.palette.text.primary },
+  text: {
+    marginTop: 60,
+    width: "45%",
+    fontSize: 60,
+    fontWeight: 800,
+    color: theme.palette.text.primary,
+  },
 }));

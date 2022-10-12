@@ -27,6 +27,8 @@ export default function Home() {
       <BlogSection />
       <OurCustomer />
       {/* <Slider /> */}
+      <Mapaccordion />
+      <RegisterSection />
       <PriceSection />
     </div>
   );
