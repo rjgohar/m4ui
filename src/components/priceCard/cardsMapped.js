@@ -4,34 +4,54 @@ import SimpleCard from ".";
 
 const Data = [
   {
-    title: "Basic Package",
-    price: 90,
-    feature1: " Extra Features",
-    feature2: " Lifetime Free Support",
-    feature3: " Full Access",
+    title: "Community ",
+    price: "Free",
+    feature1: "Web Engine ",
+    feature2: "Mobile Engine",
+    feature3: "Client Engine ",
+    feature4: "Github Issues ",
+    buttonVal: "Start Free",
   },
   {
-    title: "Standard Package",
-    price: 100,
-    feature1: " Extra Features",
-    feature2: " Lifetime Free Support",
-    feature3: " Full Access",
+    title: "Pro",
+    price: "99$",
+    feature1: "Web Engine ",
+    feature2: "Mobile Engine",
+    feature3: "Github Issues  ",
+    feature4: "Mail Support ",
+    buttonVal: "Buy Now",
   },
   {
-    title: "Ultimate Package",
-    price: 120,
-    feature1: " Extra Features",
-    feature2: " Lifetime Free Support",
-    feature3: " Full Access",
+    title: "Enterprise",
+    price: "Custom",
+    feature1: "Web Engine ",
+    feature2: "Mobile Engine",
+    feature3: "Client Engine ",
+    feature4: "Github Issues ",
+    feature5: "Mail Support ",
+    feature6: "Consultancy",
+    feature7: "Customisation",
+    buttonVal: "Buy Now",
   },
 ];
 
 const CardMapped = () => {
   const classes = useStyles();
   return (
-    <>
-      <div className={classes.container}>
-        {Data.map(({ title, price, feature1, feature2, feature3 }) => {
+    <div className={classes.container}>
+      {Data.map(
+        ({
+          title,
+          price,
+          feature1,
+          feature2,
+          feature3,
+          feature4,
+          feature5,
+          feature6,
+          feature7,
+          buttonVal,
+        }) => {
           return (
             <>
               <SimpleCard
@@ -40,12 +60,17 @@ const CardMapped = () => {
                 feature1={feature1}
                 feature2={feature2}
                 feature3={feature3}
+                feature4={feature4}
+                feature5={feature5}
+                feature6={feature6}
+                feature7={feature7}
+                buttonVal={buttonVal}
               />
             </>
           );
-        })}
-      </div>
-    </>
+        }
+      )}
+    </div>
   );
 };
 

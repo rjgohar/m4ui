@@ -66,13 +66,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundImage: `url(${MobileBg})`,
     backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center",
   },
   appContainer: {
     minHeight: 750,
   },
   main: {
     color: theme.palette.text.primary,
-    padding: "0em 0em 3em 0em",
+    padding: "5em 0em 3em 0em",
   },
   mainSecondary: {
     color: theme.palette.secondary.main,

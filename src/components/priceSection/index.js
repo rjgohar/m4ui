@@ -1,12 +1,16 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import { useState } from "react";
 import Button from "../../units/Button";
+import Wrapper from "../../units/wrapper";
 import CardMapped from "../priceCard/cardsMapped";
+import BasicTable from "../table/data";
 
 const PriceSection = () => {
   const classes = useStyles();
+  const [clk, setClk] = useState(false);
   return (
-    <Box pt={6}>
+    <Box pt={6} className={classes.container}>
       <Box className={classes.textContainer}>
         <Typography className={classes.text} variant="h1">
           choose pricing plan which suits your need
@@ -16,11 +20,25 @@ const PriceSection = () => {
         <CardMapped />
       </Box>
       <Box pt={5} pb={5} className={classes.textContainer}>
-        <Button className={classes.Button} variant="contained">
+        <Button
+          variant="contained"
+          onClick={() => {
+            setClk(!clk);
+          }}
+        >
           {" "}
-          compair the plans
+          compare the plans
         </Button>
       </Box>
+      {clk ? (
+        <>
+          <Wrapper>
+            <BasicTable />
+          </Wrapper>
+        </>
+      ) : (
+        <></>
+      )}
     </Box>
   );
 };
@@ -28,6 +46,9 @@ const PriceSection = () => {
 export default PriceSection;
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: "2em",
+  },
   textContainer: {
     display: "flex",
 
