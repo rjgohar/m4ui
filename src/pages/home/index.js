@@ -27,7 +27,7 @@ export default function Home() {
       <VideoSection />
       <BlogSection />
       <OurCustomer />
-      <Slider />
+      {/* <Slider /> */}
       <Mapaccordion />
       <RegisterSection />
       <PriceSection />
