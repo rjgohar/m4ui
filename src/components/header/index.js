@@ -226,7 +226,7 @@ const useStyles = makeStyles((theme) => ({
 
     "& .logo": {
       paddingTop: 14,
-      width: 300,
+      width: 200,
       height: 60,
       [theme.breakpoints.down("sm")]: {
         padding: "8px 0px",

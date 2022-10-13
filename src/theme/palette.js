@@ -20,6 +20,8 @@ export const palette = {
       "linear-gradient(77.21deg, rgba(164, 251, 123, 0.7) -19.09%, rgba(36, 37, 115, 0.7) 124.26%)",
 
     community: "#E7E7E7",
+    communityHeader:
+      "linear-gradient(90.56deg, #242573 -24.82%, #A4FB7B 97.49%)",
     footer: "linear-gradient(180deg, #242573 0%, #A4FB7B 100%)",
   },
 };
