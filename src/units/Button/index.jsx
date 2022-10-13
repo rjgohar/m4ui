@@ -41,7 +41,7 @@ export default withStyles((theme) => ({
       transform: "scale(1.03)",
     },
   },
-  primary:{  
+  containedPrimary:{  
     color: theme.palette.primary.main,
     padding:"10px",
     background: theme.palette.background.secondary,
@@ -53,7 +53,7 @@ export default withStyles((theme) => ({
       transform: "scale(1.03)",
     },
   },
-  secondary:{
+  containedSecondary:{
     color: theme.palette.primary.main,
     padding:"10px",
     background: theme.palette.text.primary,

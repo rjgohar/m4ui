@@ -32,8 +32,8 @@ export default function ButtonAppBar() {
     return (
       <div>
         <Menu
-          anchorOrigin={{ horizontal: "center" }}
-          transformOrigin={{ horizontal: "center" }}
+          anchorOrigin={{ horizontal: "center", vertical: "center" }}
+          transformOrigin={{ horizontal: "center", vertical: "center" }}
           className={classes.menudropdown}
           aria-controls="simple-menu"
           aria-haspopup="true"

@@ -53,7 +53,10 @@ export default function SimpleCard({
           </Typography>
         </Box>
         <Box pt={1}>
-          <Button className={classes.buttonOutlinedDrawer} variant="primary">
+          <Button
+            className={classes.buttonOutlinedDrawer}
+            variant="containedPrimary"
+          >
             {buttonVal}
           </Button>
         </Box>

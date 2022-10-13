@@ -24,9 +24,9 @@ export default function VideoSection() {
           className={classes.farme}
           src="https://www.youtube.com/embed/PfxLRA2bJ3A"
           title="euromicron corporate video"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </Box>
     </Box>

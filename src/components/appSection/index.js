@@ -42,15 +42,15 @@ export default function AppSection() {
         <Box>
           <Box className={classes.cardContainer}>
             <Box className={classes.cardContainerGrid}>
-              {Data.map((item) => {
+              {Data.map((item, i) => {
                 return (
-                  <>
+                  <div key={i}>
                     <Card
                       header={item.header}
                       image={item.Image}
                       description={item.Description}
                     />
-                  </>
+                  </div>
                 );
               })}
             </Box>
