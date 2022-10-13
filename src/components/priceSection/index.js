@@ -57,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     marginTop: 60,
-    width: "45%",
-    fontSize: 60,
+    width: "49%",
+    fontSize: 50,
     fontWeight: 800,
     color: theme.palette.text.primary,
   },

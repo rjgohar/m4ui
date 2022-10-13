@@ -28,18 +28,18 @@ export default function CommunityHeader() {
 
   return (
     <div>
-      <box className={classes.buttonscont}>
+      <Box className={classes.buttonscont}>
         <Button className={classes.buttonOutlined} variant="outlined">
           {" "}
           Sign Up
         </Button>
-        <box>
+        <Box>
           <Button className={classes.buttonOutlined} variant="outlined">
             {" "}
             Login
           </Button>
-        </box>
-      </box>
+        </Box>
+      </Box>
       <AppBar position="static" className={classes.headerMargin}>
         <Toolbar className={classes.toolbar}>
           <Link to="/">
@@ -58,7 +58,10 @@ export default function CommunityHeader() {
               </Typography>
             </div>
             <div className={classes.buttonContainer}>
-              <Button className={classes.buttonOutlined} variant="secondary">
+              <Button
+                className={classes.buttonOutlined}
+                variant="containedSecondary"
+              >
                 {" "}
                 + Add Post
               </Button>
@@ -123,7 +126,7 @@ export default function CommunityHeader() {
             <div className={classes.drawerButtons}>
               <Button
                 className={classes.buttonOutlinedDrawer}
-                variant="secondary"
+                variant="containedSecondary"
               >
                 {" "}
                 + Add Post
