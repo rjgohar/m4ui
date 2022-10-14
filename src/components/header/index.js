@@ -323,10 +323,10 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerButtons: {
     display: "flex",
-    justifyContent: "space-between",
-    padding: "0px 20px",
+    justifyContent: "space-around",
+    margin: "0px 10px ",
   },
-  buttonOutlinedDrawer: { height: "25px", width: "100%" },
+  buttonOutlinedDrawer: { height: "25px", width: "150px" },
 
   menudropdown: {
     color: theme.palette.primary.main,
