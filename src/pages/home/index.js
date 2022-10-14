@@ -8,11 +8,11 @@ import ApplicationSection from "../../components/m4uiApplicationSection";
 import M4uiManageSec from "../../components/m4uimanageSection";
 import OurCustomer from "../../components/ourCostomerGrid";
 import PriceSection from "../../components/priceSection";
-import RegisterMini from "../../components/registerminicampo";
+
 import RegisterSection from "../../components/registerSection";
 import SectionCount from "../../components/sectionCount";
 import Slider from "../../components/slider";
-import BasicTable from "../../components/table";
+
 import VideoSection from "../../components/videoCampo";
 
 export default function Home() {

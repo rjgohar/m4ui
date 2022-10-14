@@ -29,15 +29,19 @@ export default function CommunityHeader() {
   return (
     <div>
       <Box className={classes.buttonscont}>
-        <Button className={classes.buttonOutlined} variant="outlined">
-          {" "}
-          Sign Up
-        </Button>
-        <Box>
-          <Button className={classes.buttonOutlined} variant="outlined">
+        <Link to="/signup">
+          <Button className={classes.button} variant="outlined">
             {" "}
-            Login
+            Sign Up
           </Button>
+        </Link>
+        <Box>
+          <Link to="/login">
+            <Button className={classes.button} variant="outlined">
+              {" "}
+              Login
+            </Button>
+          </Link>
         </Box>
       </Box>
       <AppBar position="static" className={classes.headerMargin}>
@@ -141,6 +145,8 @@ export default function CommunityHeader() {
 
 const useStyles = makeStyles((theme) => ({
   buttonscont: {
+    paddingTop: 5,
+    paddingBottom: 5,
     display: "flex",
     justifyContent: "end",
     position: "relative",
@@ -277,5 +283,10 @@ const useStyles = makeStyles((theme) => ({
 
     float: "right",
     cursor: "pointer",
+  },
+
+  button: {
+    width: 100,
+    padding: 0,
   },
 }));
