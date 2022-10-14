@@ -7,6 +7,8 @@ import Blogs from "../pages/blogs";
 import Community from "../pages/community";
 
 import Home from "../pages/home";
+import Login from "../pages/login";
+import Signup from "../pages/signup";
 
 const Routers = () => {
   return (
@@ -18,6 +20,7 @@ const Routers = () => {
             element={
               <Layout header={<Header />}>
                 <Home />
+                <Footer />
               </Layout>
             }
           />
@@ -27,6 +30,7 @@ const Routers = () => {
               element={
                 <Layout header={<CommunityHeader />}>
                   <Community />
+                  <Footer />
                 </Layout>
               }
             />
@@ -37,12 +41,32 @@ const Routers = () => {
               element={
                 <Layout header={<CommunityHeader />}>
                   <Blogs />
+                  <Footer />
+                </Layout>
+              }
+            />
+          }
+          {
+            <Route
+              path="/login"
+              element={
+                <Layout>
+                  <Login />
+                </Layout>
+              }
+            />
+          }
+          {
+            <Route
+              path="signup"
+              element={
+                <Layout>
+                  <Signup />
                 </Layout>
               }
             />
           }
         </Routes>
-        <Footer />
       </Router>
     </>
   );
