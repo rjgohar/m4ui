@@ -79,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
   arrowButton: {
     width: 38,
     height: 38,
+    background: "transparent !important",
     // background: theme.palette.secondary.main,
     display: "grid !important",
     placeContent: "center",
@@ -86,10 +87,13 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "50%",
     zIndex: 100,
+    boxShadow: "none",
     transform: "translateY(-50%)",
-    // "&:hover": {
-    //   background: theme.palette.primary.main,
-    // },
+    "&.sc-bcXHqe": {
+      "&:hover": {
+        background: "transparent",
+      },
+    },
   },
   arrowReversed: {
     transform: "rotate(180deg)",
@@ -98,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 40px",
   },
   alignArrowLeft: {
+    background: "transparent",
     left: 0,
   },
   alignArrowRight: {

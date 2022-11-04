@@ -36,6 +36,7 @@ export default function VideoSection() {
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     paddingTop: 60,
+    marginBottom: 40,
   },
   frameContainer: {
     position: "relative",

@@ -1,7 +1,6 @@
 @charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list {
-
   background: #fff
     url("../../../node_modules/slick-carousel/slick/ajax-loader.gif") center
     center no-repeat;
@@ -158,17 +157,18 @@
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus {
+  background: transparent;
   outline: none;
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
+  background: transparent;
   opacity: 1;
 }
 .slick-dots li button:before {
   font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
 
+  background: transparent;
   position: absolute;
   top: 0;
   left: 0;
