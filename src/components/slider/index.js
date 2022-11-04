@@ -71,6 +71,13 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: "inset 0 0 1px 0px #fff",
       },
 
+      "& .kXteup ": {
+        "&:hover": {
+          background: "transparent",
+          boxShadow: "none",
+        },
+      },
+
       "& .bkVSTc": {
         display: "none",
       },

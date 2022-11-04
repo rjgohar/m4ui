@@ -49,6 +49,7 @@ export default function RegisterSection() {
 }
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
+    marginTop: 60,
     width: "80%",
     margin: "auto",
     textAlign: "center",

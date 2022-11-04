@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${dot})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    marginBottom: 50,
   },
   headingfirst: {
     paddingTop: 50,

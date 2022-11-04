@@ -3,8 +3,13 @@ import { TextField, withStyles } from "@material-ui/core";
 export default withStyles((theme) => ({
   root: {
     maxWidth: "380px",
-
+    backgroundColor: "transparent",
     border: "none",
+
+    "& .MuiFormHelperText-root ": {
+      color: theme.palette.primary.main,
+      fontSize: 11,
+    },
 
     "& .MuiOutlinedInput-root": {
       outline: "none",

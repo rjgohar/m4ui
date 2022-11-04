@@ -2,6 +2,7 @@ import { Box, makeStyles } from "@material-ui/core";
 import mail from "../../assests/mail.png";
 import Button from "../../units/Button";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function RegisterMini() {
   const classes = useStyles();
@@ -21,10 +22,12 @@ export default function RegisterMini() {
       </Box>
 
       <Box className={classes.btnSection}>
-        <Button variant="outlined" className="btn">
-          {" "}
-          register Now
-        </Button>
+        <Link to="/signup">
+          <Button variant="outlined" className="btn">
+            {" "}
+            register Now
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

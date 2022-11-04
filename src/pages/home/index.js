@@ -27,8 +27,9 @@ export default function Home() {
       <VideoSection />
       <BlogSection />
       <OurCustomer />
-      <Slider />
       <Mapaccordion />
+      <Slider />
+
       <RegisterSection />
       <PriceSection />
     </div>
