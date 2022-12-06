@@ -11,7 +11,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import logo from "../../assests/logo.png";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-
+import GitHubIcon from "@material-ui/icons/GitHub";
 import { Box, List, ListItem, SwipeableDrawer } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -117,6 +117,11 @@ export default function ButtonAppBar() {
                 {" "}
                 Get Started
               </Button>
+
+              <Box style={{ marginLeft: 20 }}>
+                {" "}
+                <GitHubIcon className={classes.GitHubIcon} />
+              </Box>
             </div>
           </div>
 
@@ -209,6 +214,10 @@ export default function ButtonAppBar() {
                 {" "}
                 Get Started
               </Button>
+              <Box>
+                {" "}
+                <GitHubIcon className={classes.GitHubIcon} />
+              </Box>
             </div>
           </SwipeableDrawer>
         </Toolbar>
@@ -250,8 +259,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  buttonOutlined: { height: "25px" },
-  buttonContained: { height: "25px", width: "140px" },
+  buttonOutlined: { height: "25px", marginTop: 5 },
+  buttonContained: { height: "25px", marginTop: 5, width: "140px" },
   pageHeadings: {
     display: "flex",
     justifyContent: "center",
@@ -290,6 +299,10 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       cursor: "pointer",
     },
+  },
+
+  GitHubIcon: {
+    fontSize: "30px",
   },
   menuButton: {
     width: 30,
