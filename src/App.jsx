@@ -2,14 +2,18 @@ import "./App.css";
 import { ThemeProvider } from "@material-ui/core";
 import Routers from "./routers";
 import { theme } from "./theme";
-import ReduxProvider from "./redux/store";
+import store from "./redux/store";
+import HooksWrapper from "./hooksWrapper";
+import { Provider } from "react-redux";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <ReduxProvider>
-        <Routers />
-      </ReduxProvider>
+      <Provider store={store}>
+        <HooksWrapper>
+          <Routers />
+        </HooksWrapper>
+      </Provider>
     </ThemeProvider>
   );
 }

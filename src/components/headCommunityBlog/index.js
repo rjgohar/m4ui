@@ -4,6 +4,7 @@ import filtericon from "../../assests/filtericon.png";
 
 export default function CommunityTabSection() {
   const classes = useStyles();
+
   return (
     <Box className={classes.mainContainer}>
       <Box className={classes.topSection}>

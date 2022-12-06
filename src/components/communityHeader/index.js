@@ -12,9 +12,14 @@ import logo from "../../assests/logo.png";
 
 import { Box, List, ListItem, SwipeableDrawer } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import UserProfile from "../userLogin";
 
 export default function CommunityHeader() {
   const classes = useStyles();
+  const isAuthenticated = useSelector(
+    (state) => state.LoginSlicer.isAuthenticated
+  );
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -29,21 +34,31 @@ export default function CommunityHeader() {
   return (
     <div>
       <Box className={classes.buttonscont}>
-        <Link to="/signup">
-          <Button className={classes.button} variant="outlined">
+        {!isAuthenticated ? (
+          <>
             {" "}
-            Sign Up
-          </Button>
-        </Link>
-        <Box>
-          <Link to="/login">
-            <Button className={classes.button} variant="outlined">
-              {" "}
-              Login
-            </Button>
-          </Link>
-        </Box>
+            <Link to="/signup">
+              <Button className={classes.button} variant="outlined">
+                {" "}
+                Sign Up
+              </Button>
+            </Link>
+            <Box>
+              <Link to="/login">
+                <Button className={classes.button} variant="outlined">
+                  {" "}
+                  Login
+                </Button>
+              </Link>
+            </Box>
+          </>
+        ) : (
+          <>
+            <UserProfile />
+          </>
+        )}
       </Box>
+
       <AppBar position="static" className={classes.headerMargin}>
         <Toolbar className={classes.toolbar}>
           <Link to="/">
