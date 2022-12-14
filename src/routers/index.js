@@ -7,6 +7,7 @@ import Blogs from "../pages/blogs";
 import Community from "../pages/community";
 
 import Home from "../pages/home";
+import Issue from "../pages/issuse";
 import Login from "../pages/login";
 import Signup from "../pages/signup";
 
@@ -41,6 +42,17 @@ const Routers = () => {
               element={
                 <Layout header={<CommunityHeader />}>
                   <Blogs />
+                  <Footer />
+                </Layout>
+              }
+            />
+          }
+          {
+            <Route
+              path="/issue"
+              element={
+                <Layout header={<Header />}>
+                  <Issue />
                   <Footer />
                 </Layout>
               }
