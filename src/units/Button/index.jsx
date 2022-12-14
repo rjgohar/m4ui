@@ -25,7 +25,7 @@ export default withStyles((theme) => ({
     border: "1px solid" + theme.palette.secondary.main,
     "&:hover": {
       backgroundColor: "transparent",
-      transform: "scale(1.03)"
+      transform: "scale(1.03)",
     },
   },
 
@@ -41,9 +41,9 @@ export default withStyles((theme) => ({
       transform: "scale(1.03)",
     },
   },
-  containedPrimary:{  
+  containedPrimary: {
     color: theme.palette.primary.main,
-    padding:"10px",
+    padding: "10px",
     background: theme.palette.background.secondary,
     borderRadius: 5,
     transition: "all 0.9s ease",
@@ -53,17 +53,18 @@ export default withStyles((theme) => ({
       transform: "scale(1.03)",
     },
   },
-  containedSecondary:{
+  containedSecondary: {
     color: theme.palette.primary.main,
-    padding:"10px",
+    padding: "10px",
     background: theme.palette.text.primary,
     borderRadius: 5,
+
     transition: "all 0.9s ease",
+    textTransform: "capitalize",
     "&:hover": {
-      background: theme.palette.primary.main,
-      color: theme.palette.text.secondary,
+      backgroundColor: alpha(theme.palette.text.primary, 0.7),
+      color: theme.palette.primary.main,
       transform: "scale(1.03)",
     },
-
-  }
+  },
 }))(Button);

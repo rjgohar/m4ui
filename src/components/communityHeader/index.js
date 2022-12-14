@@ -77,13 +77,15 @@ export default function CommunityHeader() {
               </Typography>
             </div>
             <div className={classes.buttonContainer}>
-              <Button
-                className={classes.buttonOutlined}
-                variant="containedSecondary"
-              >
-                {" "}
-                + Add Post
-              </Button>
+              <Link to="/issue">
+                <Button
+                  className={classes.buttonOutlined}
+                  variant="containedSecondary"
+                >
+                  {" "}
+                  Create Issues
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -143,13 +145,15 @@ export default function CommunityHeader() {
               </ListItem>
             </List>
             <div className={classes.drawerButtons}>
-              <Button
-                className={classes.buttonOutlinedDrawer}
-                variant="containedSecondary"
-              >
-                {" "}
-                + Add Post
-              </Button>
+              <Link to="/issue">
+                <Button
+                  className={classes.buttonOutlinedDrawer}
+                  variant="containedSecondary"
+                >
+                  {" "}
+                  Create Issues
+                </Button>
+              </Link>
             </div>
           </SwipeableDrawer>
         </Toolbar>
@@ -208,7 +212,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 50,
     gap: "30px",
   },
-  buttonOutlined: { height: "20px" },
+  buttonOutlined: { height: "40px", fontSize: "16px", fontWeight: 700 },
 
   pageHeadings: {
     display: "flex",
