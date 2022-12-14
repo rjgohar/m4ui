@@ -1,7 +1,12 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import registerSlice from "./register/register.slicer";
+import signUpSlicer from "../Features/signUp/signUp.slicer";
+import loginSlicer from "../Features/signIn/signIn.slicer";
+import newsletterSlicer from "../Features/newsletter/newsletter.slicer";
 
 const rootReducer = combineReducers({
-  registerSlice,
+  SignUp: signUpSlicer,
+  LoginSlicer: loginSlicer,
+  NewsletterSlicer: newsletterSlicer,
 });
+
 export default rootReducer;

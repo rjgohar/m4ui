@@ -3,6 +3,14 @@ import mail from "../../assests/mail.png";
 import Button from "../../units/Button";
 import React from "react";
 import { Link } from "react-router-dom";
+import * as Yup from "yup";
+import { Formik, Form } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+
+const emailSchema = Yup.object().shape({
+  email: Yup.string().email("Invalid email").required("Required"),
+
+});
 
 export default function RegisterMini() {
   const classes = useStyles();
