@@ -109,7 +109,7 @@ export default function CommunityHeader() {
             <Box className={classes.arrowsection} p={2}>
               <Box display="flex" alignItems="center">
                 <Link to="/">
-                  <img src={logo} alt="logo" className="logo" />
+                  <img src={logo} alt="logo" className={classes.logo} />
                 </Link>
               </Box>
               <Box display="flex" alignItems="center">
