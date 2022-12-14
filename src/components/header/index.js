@@ -144,7 +144,9 @@ export default function ButtonAppBar() {
           >
             <Box className={classes.arrowsection} p={2}>
               <Box display="flex" alignItems="center">
-                <img src={logo} alt="logo" className={classes.logo} />
+                <Link to="/">
+                  <img src={logo} alt="logo" className={classes.logo} />
+                </Link>
               </Box>
               <Box display="flex" alignItems="center">
                 {open ? (
