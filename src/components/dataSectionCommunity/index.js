@@ -36,7 +36,7 @@ function DataSecCommunity({
       </Box>
       <Box className={classes.dataContainer}>
         <div>
-          <Typography variant="body1">{hitext}</Typography>
+          <Typography variant="body1">Issue # {hitext}</Typography>
         </div>
         <div className={classes.bodytext}>
           <Typography variant="body1">{bodytext}</Typography>

@@ -1,42 +1,37 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import ava from "../../assests/ava.png";
-
 import DataSecCommunity from "./index";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getGithubValues } from "../../Features/github/github.action";
 
 export default function DataSectionInner() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const { getIssue, getIssueLoadingSucess } = useSelector(
+    (state) => state.GithubSlicer
+  );
+
+  useEffect(() => {
+    dispatch(getGithubValues());
+  }, [dispatch]);
   return (
     <div className={classes.grid}>
-      {Data.map(
-        (
-          {
-            textUpper,
-            ava,
-            text1,
-            text2,
-            hitext,
-            bodytext,
-            regardtext,
-            textEnd,
-          },
-          i
-        ) => {
+      {getIssueLoadingSucess &&
+        getIssue.map((i) => {
           return (
             <DataSecCommunity
-              key={i}
-              ava={ava}
-              textUpper={textUpper}
-              text1={text1}
-              text2={text2}
-              hitext={hitext}
-              bodytext={bodytext}
-              regardtext={regardtext}
-              textEnd={textEnd}
+              key={i.number}
+              ava={i.user?.avatar_url}
+              text1={i.user?.login}
+              text2={i.created_at}
+              hitext={i.number}
+              bodytext={i.body}
+              textEnd={i.textEnd}
             />
           );
-        }
-      )}
+        })}
     </div>
   );
 }
@@ -79,3 +74,5 @@ const Data = [
     textEnd: "book mark this",
   },
 ];
+
+//

@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
   main: {
     padding: 10,
     borderRadius: 5,
-    marginBottom: 90,
     border: "2px solid  " + theme.palette.text.primary,
   },
   editor: {

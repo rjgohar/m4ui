@@ -53,13 +53,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   text1: {
-    fontSize: 25,
+    fontSize: 16,
     fontWeight: 700,
     textTransform: "capitalize",
     color: theme.palette.text.primary,
   },
   text2: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 700,
     textTransform: "capitalize",
     color: theme.palette.secondary.main,
