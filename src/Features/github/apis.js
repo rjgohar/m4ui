@@ -9,8 +9,7 @@ const config = {
 };
 
 const octokit = new Octokit({
-  auth:
-    "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",
+  auth: process.env.GITHUB,
 });
 
 export const github = async (payload) => {
