@@ -1,4 +1,4 @@
-import { Box, makeStyles } from "@material-ui/core";
+import { Box, makeStyles, Typography } from "@material-ui/core";
 import mail from "../../assests/mail.png";
 import Button from "../../units/Button";
 import React from "react";
@@ -6,37 +6,77 @@ import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import { useDispatch, useSelector } from "react-redux";
+import { addNewsletter } from "../../Features/newsletter/newsletter.action";
+import { addIssue } from "../../Features/github/github.action";
 
 const emailSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
-
+  email: Yup.string()
+    .email("Invalid email")
+    .required("Required"),
 });
 
 export default function RegisterMini() {
   const classes = useStyles();
+  const dispatch = useDispatch();
   return (
     <Box className={classes.mainContainer}>
-      <Box className={classes.mailContainer}>
-        <img src={mail} alt="imge" />
-      </Box>
+      <Formik
+        initialValues={{
+          email: "",
+        }}
+        validationSchema={emailSchema}
+        onSubmit={(values) => {
+          // same shape as initial values
+          const payload = {
+            email: values.email,
+          };
 
-      <Box>
-        {" "}
-        <input
-          className={classes.input}
-          type="text"
-          placeholder="enter your email address"
-        />
-      </Box>
+          // send to server
 
-      <Box className={classes.btnSection}>
-        <Link to="/signup">
-          <Button variant="outlined" className="btn">
+          dispatch(addNewsletter(payload));
+          // dispatch(addIssue());
+        }}
+      >
+        {({
+          errors,
+          touched,
+          values,
+          handleSubmit,
+          handleChange,
+          handleBlur,
+        }) => (
+          <Form>
             {" "}
-            register Now
-          </Button>
-        </Link>
-      </Box>
+            <Box className={classes.mailContainer}>
+              <img src={mail} alt="imge" />
+            </Box>
+            <Box>
+              {" "}
+              <input
+                className={classes.input}
+                type="email"
+                placeholder="enter your email address"
+                variant="outlined"
+                name="email"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.email}
+              />
+              {/* <Box>
+                {errors.email && touched.email ? (  
+                  <Typography>{errors.email}</Typography>
+                ) : null}
+              </Box> */}
+            </Box>
+            <Box className={classes.btnSection}>
+              <Button variant="outlined" className="btn" type="submit">
+                {" "}
+                register Now
+              </Button>
+            </Box>
+          </Form>
+        )}
+      </Formik>
     </Box>
   );
 }
